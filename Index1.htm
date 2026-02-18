@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Card Component</title>
+</head>
+<body>
+
+  <h2>Wellcom Product Card Demo</h2>
+
+  <product-card name="MacBook Pro" price="1999">
+    <img slot="image" src="https://via.placeholder.com/250x150" />
+    <p slot="description">
+      Powerful laptop designed for developers and creators.
+    </p>
+  </product-card>
+  <script type="module" src="Product-card.js"></script>
+
+  <script>
+    document.addEventListener("purchase", (event) => {
+      console.log("Purchased:", event.detail);
+      alert(`You purchased ${event.detail.name} for $${event.detail.price}`);
+    });
+  </script>
+
+   <product-card name="Headphone" price="1999">
+    <img slot="image" src="https://via.placeholder.com/250x150" />
+    <p slot="description">
+      Powerful headset designed for quality sound.
+    </p>
+  </product-card>
+  <script type="module" src="Product-card.js"></script>
+
+  <script>
+    document.addEventListener("purchase", (event) => {
+      console.log("Purchased:", event.detail);
+      alert(`You purchased ${event.detail.name} for $${event.detail.price}`);
+    });
+  </script>
+</body>
+</html>
